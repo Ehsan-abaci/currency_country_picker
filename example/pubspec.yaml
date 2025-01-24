@@ -19,6 +19,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
+  fl_country_code_picker: ^0.1.9+1
 
 dev_dependencies:
   flutter_test:

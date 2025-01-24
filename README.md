@@ -5,8 +5,9 @@
 A flutter package to select a currency and country from a list with **250 countries**.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Ehsan-Abaci/currency_country_picker/master/assets/country-screen.png" width="250"/>
-  <img src="https://raw.githubusercontent.com/Ehsan-Abaci/currency_country_picker/master/assets/currency-bottomsheet.png" width="250"/>
+  <img src="https://raw.githubusercontent.com/Ehsan-Abaci/currency_country_picker/master/assets/country-screen.jpg" width="250"/>
+  <img src="https://raw.githubusercontent.com/Ehsan-Abaci/currency_country_picker/master/assets/country-dialog.jpg" width="250"/>
+  <img src="https://raw.githubusercontent.com/Ehsan-Abaci/currency_country_picker/master/assets/currency-bottomsheet.jpg" width="250"/>
 </p>
 
 ## Getting Started
