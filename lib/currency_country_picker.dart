@@ -1,5 +1,6 @@
 library currency_country_picker;
 
+import 'package:currency_country_picker/src/country_list_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'currency_country_picker.dart';
@@ -58,12 +59,26 @@ void showCurrencyPickerBottomSheet({
   );
 }
 
-void showCountryPickerDropDown({
+void showCountryPickerDialog({
   required BuildContext context,
   required ValueChanged<Country> onSelect,
   CountryPickerThemeData? theme,
   bool? showFlag,
   bool? showPhoneCode,
+  bool? showCountryName,
+  bool? showSearchField,
   List<String>? countryFilter,
   List<String>? favorites,
-}) {}
+}) {
+  showCountryListDialog(
+    context: context,
+    theme: theme,
+    onSelect: onSelect,
+    showPhoneCode: showPhoneCode,
+    showFlag: showFlag,
+    showCountryName: showCountryName,
+    showSearchField: showSearchField,
+    countryFilter: countryFilter,
+    favorites: favorites,
+  );
+}

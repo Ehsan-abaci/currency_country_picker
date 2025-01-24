@@ -22,11 +22,17 @@ class CountryPickerThemeData {
   /// If null, set to 25
   final double? flagSize;
 
+  final double? dialogHeight;
+
+  final Color? closeButtonColor;
+
   CountryPickerThemeData({
     this.backgroundColor,
+    this.closeButtonColor,
     this.titleTextStyle,
     this.countryCodeTextStyle,
     this.inputDecoration,
     this.flagSize,
+    this.dialogHeight,
   });
 }

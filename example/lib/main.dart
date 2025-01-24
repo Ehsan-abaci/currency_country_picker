@@ -64,6 +64,27 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Text(countryTitle),
               ),
+              ElevatedButton(
+                onPressed: () => showCountryPickerDialog(
+                  context: context,
+                  theme: CountryPickerThemeData(
+                    dialogHeight: 300,
+                    closeButtonColor: Colors.red,
+                    countryCodeTextStyle: const TextStyle(
+                      color: Color.fromARGB(255, 168, 36, 60),
+                      fontSize: 17,
+                    ),
+                  ),
+                  showPhoneCode: true,
+                  favorites: ['98'],
+                  onSelect: (country) {
+                    setState(() {
+                      countryTitle = country.name;
+                    });
+                  },
+                ),
+                child: Text(countryTitle),
+              ),
               const SizedBox(height: 50),
               const Text('Currency Picker:'),
               ElevatedButton(
