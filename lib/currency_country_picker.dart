@@ -4,9 +4,9 @@ import 'package:currency_country_picker/src/country_list_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'currency_country_picker.dart';
+import 'src/country_screen.dart';
+import 'src/currency_list_bottom_sheet.dart';
 
-export 'package:currency_country_picker/src/country_screen.dart';
-export 'package:currency_country_picker/src/currency_list_bottom_sheet.dart';
 export 'package:currency_country_picker/src/model/country.dart';
 export 'package:currency_country_picker/src/model/currency.dart';
 export 'package:currency_country_picker/src/services/country_service.dart';

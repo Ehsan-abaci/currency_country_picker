@@ -38,14 +38,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Currency Picker'),
+          title: const Text('Currency & Country Picker'),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text('Country Picker:'),
+              const Text('Country Picker full screen:'),
               ElevatedButton(
                 onPressed: () => showCountryPickerFullScreen(
                   context: context,
@@ -64,12 +64,11 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Text(countryTitle),
               ),
+              const Text('Country Picker dialog:'),
               ElevatedButton(
                 onPressed: () => showCountryPickerDialog(
                   context: context,
                   theme: CountryPickerThemeData(
-                    dialogHeight: 300,
-                    closeButtonColor: Colors.red,
                     countryCodeTextStyle: const TextStyle(
                       color: Color.fromARGB(255, 168, 36, 60),
                       fontSize: 17,

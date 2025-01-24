@@ -78,14 +78,6 @@ class _CountryListViewState extends State<CountryListView> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Align(
-          alignment: Alignment.topRight,
-          child: IconButton(
-            onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.close),
-            color: widget.theme?.closeButtonColor,
-          ),
-        ),
         if (widget.showSearchField)
           _SearchField(
             searchController: _searchController,

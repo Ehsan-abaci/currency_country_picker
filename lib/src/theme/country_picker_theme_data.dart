@@ -24,11 +24,8 @@ class CountryPickerThemeData {
 
   final double? dialogHeight;
 
-  final Color? closeButtonColor;
-
   CountryPickerThemeData({
     this.backgroundColor,
-    this.closeButtonColor,
     this.titleTextStyle,
     this.countryCodeTextStyle,
     this.inputDecoration,

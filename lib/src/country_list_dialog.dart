@@ -18,7 +18,7 @@ Widget _builder({
 
   return Dialog(
     shape: ContinuousRectangleBorder(
-      borderRadius: BorderRadius.circular(15),
+      borderRadius: BorderRadius.circular(25),
     ),
     backgroundColor: theme?.backgroundColor,
     child: SizedBox(
