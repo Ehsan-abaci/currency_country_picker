@@ -15,7 +15,7 @@ A flutter package to select a currency and country from a list with **250 countr
 Add the package to your pubspec.yaml:
 
  ```yaml
- currency_country_picker: ^1.1.2
+ currency_country_picker: ^1.1.3
  ```
 
 In your dart file, import the library:
