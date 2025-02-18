@@ -12,6 +12,9 @@ class CountryPickerThemeData {
   /// If null, the style will be set to [TextStyle(fontSize: 16);]
   final TextStyle? countryCodeTextStyle;
 
+  /// If null, the style will be set to [TextStyle(fontSize: 20);]
+  final TextStyle? searchTextStyle;
+
   ///The decoration used for the search field
   ///
   /// It defaults to a basic outline-bordered input decoration
@@ -27,6 +30,7 @@ class CountryPickerThemeData {
   CountryPickerThemeData({
     this.backgroundColor,
     this.titleTextStyle,
+    this.searchTextStyle,
     this.countryCodeTextStyle,
     this.inputDecoration,
     this.flagSize,

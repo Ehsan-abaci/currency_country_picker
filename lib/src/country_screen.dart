@@ -57,11 +57,13 @@ class _CountryScreenState extends State<CountryScreen> {
     if (widget.countryFilter != null) {
       final filteredCountries =
           _countryService.getCountriesByPhoneCodes(widget.countryFilter!);
-      _countryList.removeWhere((country) => filteredCountries.contains(country));
+      _countryList
+          .removeWhere((country) => filteredCountries.contains(country));
     }
 
     if (widget.favorites != null) {
-      _favoriteList = _countryService.getCountriesByPhoneCodes(widget.favorites!);
+      _favoriteList =
+          _countryService.getCountriesByPhoneCodes(widget.favorites!);
     }
     _filteredList.addAll(_countryList);
 
@@ -104,7 +106,9 @@ class _CountryScreenState extends State<CountryScreen> {
           .where(
             (c) =>
                 c.name.toLowerCase().contains(query.toLowerCase().trim()) ||
-                "+${c.phoneCode}".toLowerCase().contains(query.toLowerCase().trim()),
+                "+${c.phoneCode}"
+                    .toLowerCase()
+                    .contains(query.toLowerCase().trim()),
           )
           .toList();
     }
@@ -186,11 +190,12 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
               ? TextField(
                   controller: searchController,
                   focusNode: _focusNode,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: theme?.searchTextStyle ??
+                      const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                   decoration: theme?.inputDecoration ??
                       InputDecoration(
                         hintText: 'Search',
