@@ -1,46 +1,35 @@
 class Currency {
-  final int id;
   final String code;
   final String name;
-  final String symbol; // Emoji or Symbol
-  final String nationality;
-  final String emoji; // Flag emoji
-  final String emojiU; // Unicode representation
+  final String symbol; // Symbol
+  final String flag; // Flag emoji
 
   Currency({
-    required this.id,
     required this.code,
     required this.name,
     required this.symbol,
-    required this.nationality,
-    required this.emoji,
-    required this.emojiU,
+    required this.flag,
   });
 
   // Factory method to create Country object from JSON
   factory Currency.fromJson(Map<String, dynamic> json) {
     return Currency(
-      id: json['id'],
-      code: json['currency_code'] ?? '',
-      name: json['currency_name'] ?? '',
-      symbol: json['currency_symbol'] ?? '',
-      nationality: json['nationality'] ?? '',
-      emoji: json['emoji'] ?? '',
-      emojiU: json['emojiU'] != null ? _unicodeToEmoji(json['emojiU']) : '',
+      code: json['code'] ?? '',
+      name: json['name'] ?? '',
+      symbol: json['symbol'] ?? '',
+      flag: json['flag'] != null ? currencyToEmoji(json['flag']) : '',
     );
   }
 
-  // Helper function to convert Unicode points to actual emoji (e.g., "U+1F1EE U+1F1F7" to 🇮🇷)
-  static String _unicodeToEmoji(String unicode) {
-    final parts = unicode.split(' ');
-
-    // Ensure there are exactly two parts (for flags, we need two code points)
-    if (parts.length == 2) {
-      int firstCodePoint = int.parse(parts[0].substring(2), radix: 16);
-      int secondCodePoint = int.parse(parts[1].substring(2), radix: 16);
-      return String.fromCharCode(firstCodePoint) + String.fromCharCode(secondCodePoint);
-    }
-
-    return unicode; // Return the original string if not in expected format
+  static String currencyToEmoji(String flag) {
+    // 0x41 is Letter A
+    // 0x1F1E6 is Regional Indicator Symbol Letter A
+    // Example :
+    // firstLetter U => 20 + 0x1F1E6
+    // secondLetter S => 18 + 0x1F1E6
+    // See: https://en.wikipedia.org/wiki/Regional_Indicator_Symbol
+    final int firstLetter = flag.codeUnitAt(0) - 0x41 + 0x1F1E6;
+    final int secondLetter = flag.codeUnitAt(1) - 0x41 + 0x1F1E6;
+    return String.fromCharCode(firstLetter) + String.fromCharCode(secondLetter);
   }
 }

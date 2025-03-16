@@ -166,7 +166,6 @@ class _CountryListViewState extends State<CountryListView> {
 
 class _SearchField extends StatelessWidget {
   const _SearchField({
-    super.key,
     required this.searchController,
     required this.onSearch,
     this.theme,

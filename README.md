@@ -14,16 +14,18 @@ A flutter package to select a currency and country from a list with **250 countr
 
 Add the package to your pubspec.yaml:
 
- ```yaml
- currency_country_picker: ^1.1.3
- ```
+```yaml
+currency_country_picker: ^1.2.3
+```
 
 In your dart file, import the library:
 
- ```Dart
- import 'package:currency_country_picker/currency_country_picker.dart';
- ``` 
+```Dart
+import 'package:currency_country_picker/currency_country_picker.dart';
+```
+
 Show country picker using `showCountryPickerFullScreen`:
+
 ```Dart
 showCountryPickerFullScreen(
    context: context,
@@ -35,10 +37,11 @@ showCountryPickerFullScreen(
 ```
 
 ### Parameters:
-* `onSelect`: Called when a country is select. The country picker passes the new value to the callback (required)
-* `showFlag`: Shows flag for each country. Default value `true`.
-* `countryFilter`: Can be used to filter the Country list.
-* `favorites`: Show the favorite countries at the top of the list.
+
+- `onSelect`: Called when a country is select. The country picker passes the new value to the callback (required)
+- `showFlag`: Shows flag for each country. Default value `true`.
+- `countryFilter`: Can be used to filter the Country list.
+- `favorites`: Show the favorite countries at the top of the list.
   ```Dart
    showCountryPickerFullScreen(
       context: context,
@@ -47,8 +50,8 @@ showCountryPickerFullScreen(
       },
       countryFilter: <String>['+93', '+358','+355'],
    );
-  ``` 
-* `theme`: Set a `CountryPickerThemeData` to the country picker to customize it. (optional).
+  ```
+- `theme`: Set a `CountryPickerThemeData` to the country picker to customize it. (optional).
   ```Dart
    showCountryPickerFullScreen(
         context: context,
@@ -66,6 +69,8 @@ showCountryPickerFullScreen(
     ),
      onSelect: (Country country) => print('Select country: ${country.phoneCode}'),
    );
-  ``` 
+  ```
+
 ## Contributions
+
 Contributions of any kind are more than welcome! Feel free to fork and improve currency_country_picker in any way you want, make a pull request, or open an issue.

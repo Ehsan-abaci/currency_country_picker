@@ -169,7 +169,7 @@ class _CurrencyListViewState extends State<CurrencyListView> {
       contentPadding: const EdgeInsets.symmetric(horizontal: 25),
       leading: widget.showFlag
           ? Text(
-              currency.emoji,
+              currency.flag,
               style: TextStyle(fontSize: widget.theme?.flagSize ?? 18),
             )
           : null,
